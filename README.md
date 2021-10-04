@@ -3,7 +3,13 @@
 
 1. ingresar por consola a la carpeta del proyectonpm /CleanCodeFood
 
-2. comandos: npm install / npm install gulp -g / gulp serve 
+2. comandos: 
+ - npm install
+   - instala lo relacionado en package.json
+ - gulp serve 
+   - compila y abre en el browser
+ - gulp
+   - genera compilado para despliegue, en la carpeta: docs/ 
 
 3. https://bootstrapstarter.com/template-basic5-nom-html/
 

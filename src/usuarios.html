@@ -1,0 +1,111 @@
+<partial src="header.html" title="Lista de Usuarios"></partial>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row justify-content-between">
+      <partial src="menu.html"></partial>
+
+      <div id="content" class="col-9">
+        <div class="row justify-content-end">
+          
+          <div class="col-11 content d-flex flex-column justify-content-center" style="width: 97.6%;">
+            <div class="row justify-content-center">
+              <div class="col-11 my-2">
+                <div class="row text-center justify-content-between">
+                  
+                  <div class="col-12 col-md-5 my-2">
+                    <div class="container-users border rounded" style="height: 100%;">
+                      <h4>Usuarios</h4>
+                      <table class="table m-auto">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Francisco Rodríguez</td>
+                            <td>Administrador</td>
+                          </tr>
+                          <tr>
+                            <td>Brayan Tapias</td>
+                            <td>Administrador</td>
+                          </tr>
+                          <tr>
+                            <td>Omar Lamprea</td>
+                            <td>Administrador</td>
+                          </tr>
+                          <tr>
+                            <td>Camila Murillo</td>
+                            <td>Administrador</td>
+                          </tr>
+                          <tr>
+                            <td>Leyman Carrillo</td>
+                            <td>Administrador</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-7 my-2">
+                    <div class="detalles-usuario border rounded">
+                      <h4>Omar Lamprea</h4>
+                      <table class="table">
+                        <tr>
+                          <th>Nombre</th>
+                          <td>Omar</td>
+                        </tr>
+                        <tr>
+                          <th>Cédula</th>
+                          <td>124124</td>
+                        </tr>
+                        <tr>
+                          <th>Correo</th>
+                          <td>lampreaomar@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <th>Tel</th>
+                          <td>3131321</td>
+                        </tr>
+                        <tr>
+                          <th>Ciudad</th>
+                          <td>Armenia</td>
+                        </tr>
+                        <tr>
+                          <th>Estado</th>
+                          <td>
+                            <select name="estado" id="estado">
+                              <option value="pendiente">Pendiente</option>
+                              <option value="disponible">Disponible</option>
+                              <option value="aprobado">Aprobado</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Rol</th>
+                          <td>
+                            <select name="rol" id="rol">
+                              <option value="administrador">Administrador</option>
+                              <option value="vendedor">Vendedor</option>
+                            </select>
+                          </td>
+                        </tr>
+                      </table>
+                      <button class="btn btn-warning my-2" style="width: 95%; color: #fff;"><h5 class="m-0">Guardar</h5></button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<partial src="footer.html"></partial>

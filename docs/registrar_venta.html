@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="icon" href="./img/icon.png" />
+        <title>CleanCode Food</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="logo col-3 d-flex flex-column justify-content-center align-items-center py-3"> <a href="dashboard.html">
+
+              <img src="../img/logo2.png" alt="LOGO" width="50">
+
+              <h3 style="font-family: fangsong;">CodeClean Food</h3>
+
+            </a>
+                        </div>
+                        <div class="col-8 py-3 d-flex justify-content-between align-items-center header"
+                        style="width: 73.3%;">
+                            <img src="../img/three-stars.png" alt="stars" width="40">
+                             <h1 class="m-0">where you can find the best meals...♥</h1> 
+                            <div class="user">
+                                <img src="../img/profile-user.png" alt="User" width="40">
+                            </div>
+                            <!-- <div class="user d-flex justify-content-end align-items-center my-2">
+
+              <h2 class="m-0 mx-3">User</h2>
+
+              <img src="../img/profile-user.png" alt="USER" width="40">
+
+            </div>
+
+            <div class="logOut d-flex justify-content-end align-items-center my-2">
+
+              <button class="btn-standard "><p class="m-0">Cerrar Sesión</p></button>
+
+            </div> --></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div id="menu" class="menu col-3 menu-animations-outside">
+                        <button id="btn-drop-menu" class="drop-menu">
+                            <img src="../img/up-arrow-angle.png" alt="" width="50">
+                        </button>
+                        <div class="row text-start justify-content-center">
+                            <div class="col-12" style="height: 50%;">
+                                 <h2>Ventas</h2>
+                                <ul> <a href="ventasRealizadas.html"><li>Ventas Realizadas</li></a> <a href="registrar_venta.html"><li>Registrar Ventas</li></a>
+                                </ul>
+                            </div>
+                            <div class="col-12" style="height: 50%;">
+                                 <h2>Productos</h2>
+                                <ul> <a href="listarproductos.html"><li>Productos</li></a> <a href="productoRegistrar.html"><li>Registrar Productos</li></a>
+                                </ul>
+                            </div>
+                            <div class="col-12" style="height: 50%;">
+                                 <h2>Usuarios</h2>
+                                <ul> <a href="usuarios.html"><li>Lista de Usuarios</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content" class="col-9">
+                        <div class="row justify-content-end">
+                            <div class="col-11 content d-flex flex-column justify-content-center"
+                            style="width: 97.6%;">
+                                <div class="row justify-content-center">
+                                    <div class="col-11 my-2">
+                                        <div class="row text-center">
+                                            <div class="col-5 border">
+                                                <ol class="text-start">
+                                                    <div>
+                                                         <h5>Datos del cliente</h5>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-group mt-2">
+                                                            <label for="Cedula">Cedula</label>
+                                                            <input type="Cedula" class="form-control" placeholder="Ingrese la Cedula"
+                                                            id="Cedula">
+                                                            <label for="NombreCompleto">Nombre Completo</label>
+                                                            <input type="NombreCompleto" class="form-control"
+                                                            placeholder="Ingrese el nombre" id="NombreCompleto">
+                                                        </div>
+                                                        <div>
+                                                            <label for="espace"></label>
+                                                        </div>
+                                                        <div class="form-group mt-2">
+                                                            <div>
+                                                                 <h5>Datos del Producto</h5>
+                                                            </div>
+                                                            <label for="IdProducto">Id del producto</label>
+                                                            <input type="IdProducto" class="form-control" placeholder="Seleccione la Id del producto"
+                                                            id="IdProducto">
+                                                            <label for="Cantidad">Cantidad</label>
+                                                            <input type="Cantidad" class="form-control" placeholder="Ingrese la cantidad"
+                                                            id="Cantidad">
+                                                        </div>
+                                                        <div>
+                                                            <button class="btn btn-primary mt-2">Agregar</button>
+                                                        </div>
+                                                </ol>
+                                                </div>
+                                                <div class="col-7 border">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div>
+                                                                <table border WIDTH="420">
+                                                                    <tr>
+                                                                        <th>Id cliente</th>
+                                                                        <th>Nombre</th>
+                                                                        <th>Producto</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Precio</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>192739273</td>
+                                                                        <td>Javier Francisco</td>
+                                                                        <td>Salchipapa Sencilla</td>
+                                                                        <td>1</td>
+                                                                        <td>7.000</td>
+                                                                    </tr>
+                                                                </table>
+                                                                <div></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="col-4">
+                                                                <div>
+                                                                    <button class="btn btn-primary mt-2">Modificar</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div>
+                                                                    <button class="btn btn-primary mt-2">Eliminar</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div>
+                                                                    <button class="btn btn-primary mt-2">Registrar Venta</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/all.js"></script>
+    </body>
+
+</html>

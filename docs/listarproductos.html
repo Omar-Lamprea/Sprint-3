@@ -19,211 +19,228 @@ integrity="sha256-CNwnGWPO03a1kOlAsGaH5g8P3dFaqFqqGFV/1nkX5OU=" crossorigin="ano
             <div class="container-fluid">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="logo col-3 d-flex flex-column justify-content-center align-items-center py-3"> <a href="dashboard.html">
+                        <div class="
+                logo
+                col-3
+                d-flex
+                flex-column
+                justify-content-center
+                align-items-center
+                py-3
+              "> <a href="dashboard.html">
+                <img src="../img/logo2.png" alt="LOGO" width="50" />
+                <h3 style="font-family: fangsong">CodeClean Food</h3>
+              </a>
 
-              <img src="../img/logo2.png" alt="LOGO" width="50">
-
-              <h3 style="font-family: fangsong;">CodeClean Food</h3>
-
-            </a>
                         </div>
-                        <div class="col-8 py-3 d-flex justify-content-between align-items-center header"
-                        style="width: 73.3%;">
-                            <img src="../img/three-stars.png" alt="stars" width="40">
-                             <h1 class="m-0">Lista de Productos</h1> 
+                        <div class="
+                col-8
+                py-3
+                d-flex
+                justify-content-between
+                align-items-center
+                header
+              " style="width: 73.3%">
+                            <img src="../img/three-stars.png" alt="stars" width="40" />
+                             <h1 class="m-0">Lista de Productos</h1>
+
                             <div class="user">
-                                <img src="../img/profile-user.png" alt="User" width="40">
+                                <img src="../img/profile-user.png" alt="User" width="40" />
                             </div>
                             <!-- <div class="user d-flex justify-content-end align-items-center my-2">
-
               <h2 class="m-0 mx-3">User</h2>
-
               <img src="../img/profile-user.png" alt="USER" width="40">
-
             </div>
-
             <div class="logOut d-flex justify-content-end align-items-center my-2">
-
               <button class="btn-standard "><p class="m-0">Cerrar Sesión</p></button>
-
             </div> --></div>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div id="menu" class="menu col-3 menu-animations-outside">
-                        <button id="btn-drop-menu" class="drop-menu">
-                            <img src="../img/up-arrow-angle.png" alt="" width="50">
-                        </button>
-                        <div class="row text-start justify-content-center">
-                            <div class="col-12" style="height: 50%;">
-                                 <h2>Ventas</h2>
-                                <ul> <a href="ventasRealizadas.html"><li>Ventas Realizadas</li></a> <a href="registrar_venta.html"><li>Registrar Ventas</li></a>
-                                </ul>
-                            </div>
-                            <div class="col-12" style="height: 50%;">
-                                 <h2>Productos</h2>
-                                <ul> <a href="listarproductos.html"><li>Productos</li></a> <a href="productoRegistrar.html"><li>Registrar Productos</li></a>
-                                </ul>
-                            </div>
-                            <div class="col-12" style="height: 50%;">
-                                 <h2>Usuarios</h2>
-                                <ul> <a href="usuarios.html"><li>Lista de Usuarios</li></a>
-                                </ul>
-                            </div>
-                        </div>
+        <script src="/src/data/productos.json"></script>
+    </body>
+
+</html>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div id="menu" class="menu col-3 menu-animations-outside">
+                <button id="btn-drop-menu" class="drop-menu">
+                    <img src="../img/up-arrow-angle.png" alt="" width="50">
+                </button>
+                <div class="row text-start justify-content-center">
+                    <div class="col-12" style="height: 50%;">
+                         <h2>Ventas</h2>
+
+                        <ul> <a href="ventasRealizadas.html"><li>Ventas Realizadas</li></a>
+ <a href="registrar_venta.html"><li>Registrar Ventas</li></a>
+
+                        </ul>
                     </div>
-                    <div id="content" class="col-9">
-                        <div class="row justify-content-end">
-                            <div class="col-11 content" style="width: 97.6%;">
-                                <div class="container-fluid">
-                                    <div class="container">
-                                        <div class="card-body">
-                                            <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..."
-                                            aria-label="Buscar..." autocomplete="off" spellcheck="true" role="combobox"
-                                            aria-autocomplete="list" aria-expanded="false" aria-owns="" dir="auto"
-                                            style="position:relative; vertical-align: top;">
-                                            <table class="table table-hover table-responsive">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Codigo</th>
-                                                        <th scope="col">Nombre Producto</th>
-                                                        <th scope="col">Descripción</th>
-                                                        <th scope="col">Precio</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Hamburguesa</td>
-                                                        <td>Hamburguesa tres carnes</td>
-                                                        <td>10000</td>
-                                                        <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                                                            <a
-                                                            href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalModificar"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                    <div class="col-12" style="height: 50%;">
+                         <h2>Productos</h2>
 
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
-                                                                </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Hamburguesa</td>
-                                                        <td>Hamburguesa tres carnes</td>
-                                                        <td>10000</td>
-                                                        <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                                                            <a
-                                                            href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <ul> <a href="listarproductos.html"><li>Productos</li></a>
+ <a href="productoRegistrar.html"><li>Registrar Productos</li></a>
 
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
-                                                                </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td>Hamburguesa</td>
-                                                        <td>Hamburguesa tres carnes</td>
-                                                        <td>10000</td>
-                                                        <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                                                            <a
-                                                            href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        </ul>
+                    </div>
+                    <div class="col-12" style="height: 50%;">
+                         <h2>Usuarios</h2>
 
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
-                                                                </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">4</th>
-                                                        <td>Hamburguesa</td>
-                                                        <td>Hamburguesa tres carnes</td>
-                                                        <td>10000</td>
-                                                        <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                                                            <a
-                                                            href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <ul> <a href="usuarios.html"><li>Lista de Usuarios</li></a>
 
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
-                                                                </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">5</th>
-                                                        <td>Hamburguesa</td>
-                                                        <td>Hamburguesa tres carnes</td>
-                                                        <td>10000</td>
-                                                        <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                                                            <a
-                                                            href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="col-9">
+                <div class="row justify-content-end">
+                    <div class="col-11 content" style="width: 97.6%;">
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="card-body">
+                                    <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..."
+                                    aria-label="Buscar..." autocomplete="off" spellcheck="true" role="combobox"
+                                    aria-autocomplete="list" aria-expanded="false" aria-owns="" dir="auto"
+                                    style="position:relative; vertical-align: top;">
+                                    <table class="table table-hover table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Codigo</th>
+                                                <th scope="col">Nombre Producto</th>
+                                                <th scope="col">Descripción</th>
+                                                <th scope="col">Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Hamburguesa</td>
+                                                <td>Hamburguesa tres carnes</td>
+                                                <td>10000</td>
+                                                <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
 
+                                                    <a
+                                                    href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalModificar"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
                         <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
-                                                                </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <!-- Modal Modificar Producto-->
-                                            <div class="modal fade" id="modalModificar" tabindex="-1" aria-hidden="true"
-                                            aria-labelledby="modalTitle" data-bs-backdrop="static">
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                             <h5 class="modal-title" id="modalTitle">Modificar Producto</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="card-body">
-                                                                <form class="form" action="">
-                                                                    <fieldset class="border p-3">
-                                                                        <div class="form-group mt-2">
-                                                                            <label for="IdProducto">ID Producto</label>
-                                                                            <input type="IdProducto" class="form-control" value="1"
-                                                                            id="IdProducto" readonly>
-                                                                        </div>
-                                                                        <div class="form-group mt-2">
-                                                                            <label for="Producto">Producto</label>
-                                                                            <input type="Producto" class="form-control" value="Hamburguesa"
-                                                                            id="Producto">
-                                                                        </div>
-                                                                        <div class="form-group mt-2">
-                                                                            <label for="Descripcion">Descripción</label>
-                                                                            <input type="Descripcion" class="form-control" value="Hamburguesa tres carnes"
-                                                                            id="Descripcion">
-                                                                        </div>
-                                                                        <div class="form-group mt-2">
-                                                                            <label for="Precio">Precio</label>
-                                                                            <input type="Precio" class="form-control" value="10000"
-                                                                            id="Precio">
-                                                                        </div>
-                                                                    </fieldset>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Salir</button>
-                                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
-                                                        </div>
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Hamburguesa</td>
+                                                <td>Hamburguesa tres carnes</td>
+                                                <td>10000</td>
+                                                <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+
+                                                    <a
+                                                    href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Hamburguesa</td>
+                                                <td>Hamburguesa tres carnes</td>
+                                                <td>10000</td>
+                                                <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+
+                                                    <a
+                                                    href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Hamburguesa</td>
+                                                <td>Hamburguesa tres carnes</td>
+                                                <td>10000</td>
+                                                <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+
+                                                    <a
+                                                    href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Hamburguesa</td>
+                                                <td>Hamburguesa tres carnes</td>
+                                                <td>10000</td>
+                                                <td> <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+
+                                                    <a
+                                                    href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
+                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span>
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Modal Modificar Producto-->
+                                    <div class="modal fade" id="modalModificar" tabindex="-1" aria-hidden="true"
+                                    aria-labelledby="modalTitle" data-bs-backdrop="static">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                     <h5 class="modal-title" id="modalTitle">Modificar Producto</h5>
+
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="card-body">
+                                                        <form class="form" action="">
+                                                            <fieldset class="border p-3">
+                                                                <div class="form-group mt-2">
+                                                                    <label for="IdProducto">ID Producto</label>
+                                                                    <input type="IdProducto" class="form-control" value="1"
+                                                                    id="IdProducto" readonly>
+                                                                </div>
+                                                                <div class="form-group mt-2">
+                                                                    <label for="Producto">Producto</label>
+                                                                    <input type="Producto" class="form-control" value="Hamburguesa"
+                                                                    id="Producto">
+                                                                </div>
+                                                                <div class="form-group mt-2">
+                                                                    <label for="Descripcion">Descripción</label>
+                                                                    <input type="Descripcion" class="form-control" value="Hamburguesa tres carnes"
+                                                                    id="Descripcion">
+                                                                </div>
+                                                                <div class="form-group mt-2">
+                                                                    <label for="Precio">Precio</label>
+                                                                    <input type="Precio" class="form-control" value="10000"
+                                                                    id="Precio">
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
                                                     </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Salir</button>
+                                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-                  <button type="button" class="btn btn-primary btn-sm" >Modificar Producto</button>
-
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar Producto</button>
-
-                </div> --></div>
+                                    </div>
                                 </div>
-                            </div>
+                                <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="button" class="btn btn-primary btn-sm" >Modificar Producto</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar Producto</button>
+                </div> --></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="./js/all.js"></script>
-    </body>
+    </div>
+</div>
+<script src="./js/all.js"></script>
+</body>
 
 </html>

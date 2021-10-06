@@ -1,0 +1,64 @@
+{
+    "Productos": [
+        {
+            "codigo": "01",
+            "nombre": "Pasta Vegetariana",
+            "descripcion": "",
+            "precio": "17.000"
+        },
+        {
+            "codigo": "02",
+            "nombre": "Lasaña de Verduras",
+            "descripcion": "",
+            "precio": "18.000"
+        },
+        {
+            "codigo": "03",
+            "nombre": "Brocheta de Verduras",
+            "descripcion": "",
+            "precio": "12.000"
+        },
+        {
+            "codigo": "04",
+            "nombre": "Sopa de Verduras con Pan",
+            "descripcion": "",
+            "precio": "15.000"
+        },
+        {
+            "codigo": "05",
+            "nombre": "Hamburguesa de Lentejas y Vegetales Salteados",
+            "descripcion": "",
+            "precio": "15.000"
+        },
+        {
+            "codigo": "06",
+            "nombre": "Salmón a la plancha",
+            "descripcion": "",
+            "precio": "25.000"
+        },
+        {
+            "codigo": "07",
+            "nombre": "Hamburguesa de Res Sencilla",
+            "descripcion": "",
+            "precio": "12.000"
+        },
+        {
+            "codigo": "08",
+            "nombre": "Filete de Ternera con Esparragos",
+            "descripcion": "",
+            "precio": "25.000"
+        },
+        {
+            "codigo": "09",
+            "nombre": "Brocheta de Carne",
+            "descripcion": "",
+            "precio": "15.000"
+        },
+        {
+            "codigo": "10",
+            "nombre": "Carne en Bistec con Papas a la francesa",
+            "descripcion": "",
+            "precio": "25.000"
+        }
+    ]
+}

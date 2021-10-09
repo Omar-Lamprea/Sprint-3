@@ -115,7 +115,7 @@
                                     <div class="col-12 col-md-5 my-2">
                                         <div class="container-users border rounded" style="height: 100%;">
                                             <table class="table m-auto">
-                                                 <h4>Usuarios</h4>
+                                                 <h4 class="my-2">Usuarios</h4>
                                                 <thead>
                                                     <tr>
                                                         <th>Nombre</th>
@@ -124,53 +124,91 @@
                                                 </thead>
                                                 <tbody id="user-list"></tbody>
                                             </table>
+                                            <button type="button" class="btn btn-warning my-2" style="width: 95%; color: #fff;"
+                                            data-bs-toggle="modal" data-bs-target="#addUser">Agregar Usuario</button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel"
+                                            aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                             <h5 class="modal-title" id="addUserLabel">Nuevo Usuario</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <table class="table">
+                                                                <tbody id="add-user">
+                                                                    <tr>
+                                                                        <th>Nombre</th>
+                                                                        <td>
+                                                                            <input type="text" name="nombre">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Cédula</th>
+                                                                        <td>
+                                                                            <input type="text">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Correo</th>
+                                                                        <td>
+                                                                            <input type="text">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Tel</th>
+                                                                        <td>
+                                                                            <input type="text">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Ciudad</th>
+                                                                        <td>
+                                                                            <input type="text">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Estado</th>
+                                                                        <td>
+                                                                            <select name="estado">
+                                                                                <option value="Pendiente">Pendiente</option>
+                                                                                <option value="Disponible">Disponible</option>
+                                                                                <option value="Aprobado">Aprobado</option>
+                                                                            </select>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Rol</th>
+                                                                        <td>
+                                                                            <select name="rol">
+                                                                                <option value="Vendedor">Vendedor</option>
+                                                                                <option value="Administrador">Administrador</option>
+                                                                            </select>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button id="send-user" type="button" class="btn" style="color: #fff; background-color: #59b392;">Agregar Usuario</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-7 my-2">
-                                        <div class="detalles-usuario border rounded">
-                                            <table id="user-details" class="table">
-                                                 <h4>Omar Lamprea</h4>
-                                                <tr>
-                                                    <th>Nombre</th>
-                                                    <td>Omar</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Cédula</th>
-                                                    <td>124124</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Correo</th>
-                                                    <td>lampreaomar@gmail.com</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Tel</th>
-                                                    <td>3131321</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Ciudad</th>
-                                                    <td>Armenia</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Estado</th>
-                                                    <td>
-                                                        <select name="estado" id="estado">
-                                                            <option value="pendiente">Pendiente</option>
-                                                            <option value="disponible">Disponible</option>
-                                                            <option value="aprobado">Aprobado</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Rol</th>
-                                                    <td>
-                                                        <select name="rol" id="rol">
-                                                            <option value="administrador">Administrador</option>
-                                                            <option value="vendedor">Vendedor</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
+                                        <div class="detalles-usuario border rounded d-flex flex-column justify-content-around align-items-center"
+                                        style="min-height: 26rem;">
+                                            <table id="user-details" class="table d-none">
+                                                 <h4 id="user-name" class="my-2">Detalles de Usuario</h4>
+                                                <img id="img-details" src="./img/logo2.png" alt="usuarios" width="150"
+                                                class="m-4">
                                             </table>
-                                            <button class="btn btn-warning my-2" style="width: 95%; color: #fff;">
+                                            <button class="d-none btn btn-warning my-2" style="width: 95%; color: #fff;"
+                                            id="btn-save-data">
                                                 <h5 class="m-0">Guardar</h5>
                                             </button>
                                         </div>

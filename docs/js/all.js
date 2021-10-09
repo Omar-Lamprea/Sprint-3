@@ -215,19 +215,17 @@ async function usersData(database){
       plantilla.estado = data[5]
       plantilla.rol = data[6]
       // plantilla.id = (usersRow.length + 1).toString()
-      plantilla.id = userId[userId.length - 1]
-      // plantilla.id = ''
+      // plantilla.id = userId[userId.length]
+      plantilla.id = (usersRow.length + 1).toString()
 
-      // console.log(plantilla);
-      // console.log(userId[userId.length -1]);
-      // console.log(response.docs[2].id);
+      // console.log(plantilla.id)
 
       guardarUsuario(plantilla)
 
     })
     
     async function guardarUsuario(plantilla){
-      const newUser = await database.collection('usuarios').add(plantilla)
+      const newUser = await database.collection('usuarios').doc(plantilla.id).set(plantilla)
       window.location.reload()
     }
 

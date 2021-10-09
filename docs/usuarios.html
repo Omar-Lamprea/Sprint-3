@@ -135,65 +135,68 @@
                                                              <h5 class="modal-title" id="addUserLabel">Nuevo Usuario</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <table class="table">
-                                                                <tbody id="add-user">
-                                                                    <tr>
-                                                                        <th>Nombre</th>
-                                                                        <td>
-                                                                            <input type="text" name="nombre">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Cédula</th>
-                                                                        <td>
-                                                                            <input type="text">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Correo</th>
-                                                                        <td>
-                                                                            <input type="text">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Tel</th>
-                                                                        <td>
-                                                                            <input type="text">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Ciudad</th>
-                                                                        <td>
-                                                                            <input type="text">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Estado</th>
-                                                                        <td>
-                                                                            <select name="estado">
-                                                                                <option value="Pendiente">Pendiente</option>
-                                                                                <option value="Disponible">Disponible</option>
-                                                                                <option value="Aprobado">Aprobado</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>Rol</th>
-                                                                        <td>
-                                                                            <select name="rol">
-                                                                                <option value="Vendedor">Vendedor</option>
-                                                                                <option value="Administrador">Administrador</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <button id="send-user" type="button" class="btn" style="color: #fff; background-color: #59b392;">Agregar Usuario</button>
-                                                        </div>
+                                                        <form>
+                                                            <div class="modal-body">
+                                                                <table class="table">
+                                                                    <tbody id="add-user">
+                                                                        <tr>
+                                                                            <th>Nombre</th>
+                                                                            <td>
+                                                                                <input type="text" name="nombre" required>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Cédula</th>
+                                                                            <td>
+                                                                                <input type="number" name="cedula" required>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Email</th>
+                                                                            <td>
+                                                                                <input type="text" name="email" required>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Teléfono</th>
+                                                                            <td>
+                                                                                <input type="text" name="telefono" required>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Ciudad</th>
+                                                                            <td>
+                                                                                <input type="text" name="ciudad" required>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Estado</th>
+                                                                            <td>
+                                                                                <select name="estado">
+                                                                                    <option value="Pendiente">Pendiente</option>
+                                                                                    <option value="Disponible">Disponible</option>
+                                                                                    <option value="Aprobado">Aprobado</option>
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Rol</th>
+                                                                            <td>
+                                                                                <select name="rol">
+                                                                                    <option value="Vendedor">Vendedor</option>
+                                                                                    <option value="Administrador">Administrador</option>
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button id="send-user" type="submit" class="btn" style="color: #fff; background-color: #59b392;"
+                                                                data-bs-dismiss="modal">Agregar Usuario</button>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>

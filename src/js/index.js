@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
   //data functions....................
-
-  usersData(database)
+  if(window.location.pathname === '/usuarios.html') usersData(database)
 
 })

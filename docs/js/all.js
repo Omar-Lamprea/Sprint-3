@@ -54,32 +54,22 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
   //data functions....................
-
-  usersData(database)
+  if(window.location.pathname === '/usuarios.html') usersData(database)
 
 })
 async function usersData(database){
-
-  //plantilla 
-  const datas = {
-    nombre: 'Omar Lamprea',
-    cedula: 3131232,
-    email: 'lampreaomar@gmail.com',
-    telefono: 321382731,
-    ciudad: 'Armenia',
-    estado: 'Pendiente',
-    rol: 'Vendedor'
-  }
   
   try{
     //lectura de datos
     const response = await database.collection('usuarios').get()
     const userList = document.getElementById('user-list')
     const usersRow = []
+    const userId = []
     showData()
     //pintar en el browser
     function showData(){
       response.forEach(users => {
+        userId.push(users.id)
         const user = users.data()
         const usertable = `
           <tr>
@@ -185,11 +175,61 @@ async function usersData(database){
 
 
     //agregar usuario
-    const addUserForm = document.querySelectorAll('input[name]')
-    const sendUser = document.getElementById('send-user')
-    sendUser.addEventListener('click', e =>{
-      console.log(addUserForm)
+    const addUserForm = document.querySelectorAll('input[required]')
+    const btnSendUser = document.getElementById('send-user')
+    const selectForm = document.querySelectorAll('select[name]')
+
+    //plantilla 
+    const plantilla = {
+      nombre: '',
+      cedula: '',
+      email: '',
+      telefono: '',
+      ciudad: '',
+      estado: '',
+      rol: '',
+      id: ''
+    }
+
+    const data = []
+
+    // console.log(data);
+
+    btnSendUser.addEventListener('click', e =>{
+      e.preventDefault()
+      //recorro inputs
+      for (let i = 0; i < addUserForm.length; i++) {
+        data.push(addUserForm[i].value)
+      }
+      //recorro selects
+      for (let i = 0; i < selectForm.length; i++) {
+        data.push(selectForm[i].value)
+      }
+
+      //asigno data a la plantilla
+      plantilla.nombre = data[0]
+      plantilla.cedula = data[1]
+      plantilla.email = data[2]
+      plantilla.telefono = data[3]
+      plantilla.ciudad = data[4]
+      plantilla.estado = data[5]
+      plantilla.rol = data[6]
+      // plantilla.id = (usersRow.length + 1).toString()
+      plantilla.id = userId[userId.length - 1]
+      // plantilla.id = ''
+
+      // console.log(plantilla);
+      // console.log(userId[userId.length -1]);
+      // console.log(response.docs[2].id);
+
+      guardarUsuario(plantilla)
+
     })
+    
+    async function guardarUsuario(plantilla){
+      const newUser = await database.collection('usuarios').add(plantilla)
+      window.location.reload()
+    }
 
   }catch(error){
     console.error(error)

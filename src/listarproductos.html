@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" integrity="sha256-CNwnGWPO03a1kOlAsGaH5g8P3dFaqFqqGFV/1nkX5OU=" crossorigin="anonymous"/>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css"
+  integrity="sha256-CNwnGWPO03a1kOlAsGaH5g8P3dFaqFqqGFV/1nkX5OU=" crossorigin="anonymous" />
 
 <partial src="header.html" title="Lista de Productos"></partial>
 
@@ -13,81 +15,81 @@
             <div class="container-fluid">
               <div class="container">
                 <div class="card-body">
+                  <!-- Boton Agregar Producto-->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
+                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar Producto</button>
+                  </div>
+                  <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..."
+                    aria-label="Buscar..." autocomplete="off" spellcheck="true" role="combobox" aria-autocomplete="list"
+                    aria-expanded="false" aria-owns="" dir="auto" style="position:relative; vertical-align: top;">
 
-                  <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..." aria-label="Buscar..." autocomplete="off" spellcheck="true" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="" dir="auto" style="position:relative; vertical-align: top;">
-     
                   <table class="table table-hover table-responsive">
-                  <thead>
-                    <tr>
-                      <th scope="col">Codigo</th>
-                      <th scope="col">Nombre Producto</th>
-                      <th scope="col">Descripción</th>
-                      <th scope="col">Precio</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Hamburguesa</td>
-                      <td>Hamburguesa tres carnes</td>
-                      <td>10000</td>
-                      <td>
-                        <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                        <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalModificar"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
-                      </td>
-                    </tr>
-        
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Hamburguesa</td>
-                      <td>Hamburguesa tres carnes</td>
-                      <td>10000</td>
-                      <td>
-                        <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                        <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Hamburguesa</td>
-                      <td>Hamburguesa tres carnes</td>
-                      <td>10000</td>
-                      <td>
-                        <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                        <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Hamburguesa</td>
-                      <td>Hamburguesa tres carnes</td>
-                      <td>10000</td>
-                      <td>
-                        <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                        <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Hamburguesa</td>
-                      <td>Hamburguesa tres carnes</td>
-                      <td>10000</td>
-                      <td>
-                        <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                        <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>                    
-                        <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
-                      </td>
-                    </tr>
-                   
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Nombre Producto</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="listar-productos">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Hamburguesa</td>
+                        <td>Hamburguesa tres carnes</td>
+                        <td>10000</td>
+                        <td>
+                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+                          <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalModificar"><span
+                                     class="oi oi-pencil" title="Editar Producto"></span</a>
+                          <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Hamburguesa</td>
+                        <td>Hamburguesa tres carnes</td>
+                        <td>10000</td>
+                        <td>
+                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
+                                <a href="" class="btn btn-link"><span class="oi oi-trash"
+                                title="Eliminar Producto"></span></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Hamburguesa</td>
+                        <td>Hamburguesa tres carnes</td>
+                        <td>10000</td>
+                        <td>
+                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
+                                <a href="" class="btn btn-link"><span class="oi oi-trash"
+                                title="Eliminar Producto"></span></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Hamburguesa</td>
+                        <td>Hamburguesa tres carnes</td>
+                        <td>10000</td>
+                        <td>
+                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
+                                <a href="" class="btn btn-link"><span class="oi oi-trash"
+                                title="Eliminar Producto"></span></a>
+                        </td>
+                      </tr>
+
+
+                    </tbody>
                   </table>
                   <!-- Modal Modificar Producto-->
-                  <div class="modal fade" id="modalModificar" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                  <div class="modal fade" id="modalModificar" tabindex="-1" aria-hidden="true"
+                    aria-labelledby="modalTitle" data-bs-backdrop="static">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -95,40 +97,83 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          
-                            <div class="card-body">
-                            <form class="form" action="">
-                                <fieldset class="border p-3">
-                                    <div class="form-group mt-2">
-                                        <label for="IdProducto">ID Producto</label>
-                                        <input type="IdProducto" class="form-control" value="1" id="IdProducto" readonly>
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <label for="Producto">Producto</label>
-                                        <input type="Producto" class="form-control" value="Hamburguesa" id="Producto">
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <label for="Descripcion">Descripción</label>
-                                        <input type="Descripcion" class="form-control" value="Hamburguesa tres carnes" id="Descripcion">
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <label for="Precio">Precio</label>
-                                        <input type="Precio" class="form-control" value="10000" id="Precio">
-                                    </div>
-                                </fieldset>
+
+                          <div class="card-body">
+                            <form id="form-editar-producto" class="form" action="">
+                              <fieldset class="border p-3">
+                                <div class="form-group mt-2">
+                                  <label for="IdProducto">ID Producto</label>
+                                  <input type="number" class="form-control" value="1" name="IdProducto" readonly>
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="producto">Producto</label>
+                                  <input type="text" class="form-control" value="Hamburguesa" name="producto">
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="descripcion">Descripción</label>
+                                  <input type="text" class="form-control" value="Hamburguesa tres carnes"
+                                    name="descripcion">
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="precio">Precio</label>
+                                  <input type="number" class="form-control" value="10000" name="precio">
+                                </div>
+                              </fieldset>
                             </form>
-                            </div>
+                          </div>
 
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Salir</button>
-                          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
+                          <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="btn-guardar-cambios-producto">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal Agregar Producto-->
+                  <div class="modal fade" id="modalAgregar" tabindex="-1" aria-hidden="true"
+                    aria-labelledby="modalTitle" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalTitle">Agregar Producto</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="card-body">
+                            <form id="form-agregar" class="form" action="">
+                              <fieldset class="border p-3">
+                                <div class="form-group mt-2">
+                                  <label for="IdProducto">ID Producto</label>
+                                  <input type="number" class="form-control" id="IdProducto">
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="producto">Producto</label>
+                                  <input type="text" class="form-control" id="producto">
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="descripcion">Descripción</label>
+                                  <input type="text" class="form-control" id="descripcion">
+                                </div>
+                                <div class="form-group mt-2">
+                                  <label for="precio">Precio</label>
+                                  <input type="number" class="form-control" id="precio">
+                                </div>
+                              </fieldset>
+                            </form>
+                          </div>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Salir</button>
+                          <button type="submit" class="btn btn-success" id="btn-guardar">Guardar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-               <!--  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <!--  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button type="button" class="btn btn-primary btn-sm" >Modificar Producto</button>
                   <button type="button" class="btn btn-danger btn-sm">Eliminar Producto</button>
                 </div> -->
@@ -143,4 +188,3 @@
 </div>
 
 <partial src="footer.html"></partial>
-

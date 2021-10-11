@@ -30,28 +30,6 @@ function dropMenu(){
 document.addEventListener('DOMContentLoaded', e => {
   //animaciones menu:
   dropMenu();
-debugger;
-  //Firestore:
-  const firebaseConfig = {
-    apiKey: "AIzaSyC7WRbMMBb_w-eAOCxQRr-Dj3XTlS4Hmgs",
-    authDomain: "cleancode-8bc7d.firebaseapp.com",
-    projectId: "cleancode-8bc7d",
-    storageBucket: "cleancode-8bc7d.appspot.com",
-    messagingSenderId: "850754643948",
-    appId: "1:850754643948:web:596d8d793cb3d4c78f02c9",
-    measurementId: "G-97SC9T3N3N"
-  };
-  
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  //initialize firestore database 
-  const database = firebase.firestore()
-  //initialize auth service
-  const auth = firebase.auth()
-  const proveedor = new firebase.auth.GoogleAuthProvider()
-
-
-
 
   //Firestore:
   const firebaseConfig = {
@@ -71,28 +49,34 @@ debugger;
   //initialize auth service
   const auth = firebase.auth()
   const proveedor = new firebase.auth.GoogleAuthProvider()
-
-
 
 
   //data functions....................
   if(window.location.pathname === '/usuarios.html') usersData(database)
+  if(window.location.pathname === '/listarproductos.html') productos(database)
 
 })
 function productos(database){
-  debugger;
+
   const agregarProducto = document.getElementById('form-agregar');
-console.log(database);
-  agregarProducto.addEventListener('submit', e => {
+  console.log(agregarProducto);
+  const data = []
+  const idProducto = document.getElementById('IdProducto');
+  const producto = document.getElementById('producto');
+  const descripcion = document.getElementById('descripcion');
+  const precio = document.getElementById('precio');
+
+    const botonagregar = document.getElementById('btn-guardar');
+    botonagregar.addEventListener('click', e => {
     e.preventDefault();
     console.log(e);
-    const idProducto = form-agregar['IdProducto'].value;
-    const producto = form-agregar['producto'].value;
-    const descripcion = form-agregar['descripcion'].value;
-    const precio = form-agregar['precio'].value;
-  
-    console.log(idProducto, producto, descripcion, precio)
+    data.push(idProducto.value, producto.value, descripcion.value, precio.value)
+    console.log(data);
+
   })
+
+  
+  
 }
 
 async function usersData(database){

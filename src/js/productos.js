@@ -1,15 +1,22 @@
 function productos(database){
-  debugger;
+
   const agregarProducto = document.getElementById('form-agregar');
-console.log(database);
-  agregarProducto.addEventListener('submit', e => {
+  console.log(agregarProducto);
+  const data = []
+  const idProducto = document.getElementById('IdProducto');
+  const producto = document.getElementById('producto');
+  const descripcion = document.getElementById('descripcion');
+  const precio = document.getElementById('precio');
+
+    const botonagregar = document.getElementById('btn-guardar');
+    botonagregar.addEventListener('click', e => {
     e.preventDefault();
     console.log(e);
-    const idProducto = form-agregar['IdProducto'].value;
-    const producto = form-agregar['producto'].value;
-    const descripcion = form-agregar['descripcion'].value;
-    const precio = form-agregar['precio'].value;
-  
-    console.log(idProducto, producto, descripcion, precio)
+    data.push(idProducto.value, producto.value, descripcion.value, precio.value)
+    console.log(data);
+
   })
+
+  
+  
 }

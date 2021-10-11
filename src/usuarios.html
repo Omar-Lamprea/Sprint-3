@@ -15,85 +15,92 @@
                   
                   <div class="col-12 col-md-5 my-2">
                     <div class="container-users border rounded" style="height: 100%;">
-                      <h4>Usuarios</h4>
                       <table class="table m-auto">
+                        <h4 class="my-2">Usuarios</h4>
                         <thead>
                           <tr>
                             <th>Nombre</th>
                             <th>Rol</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td>Francisco Rodríguez</td>
-                            <td>Administrador</td>
-                          </tr>
-                          <tr>
-                            <td>Brayan Tapias</td>
-                            <td>Administrador</td>
-                          </tr>
-                          <tr>
-                            <td>Omar Lamprea</td>
-                            <td>Administrador</td>
-                          </tr>
-                          <tr>
-                            <td>Camila Murillo</td>
-                            <td>Administrador</td>
-                          </tr>
-                          <tr>
-                            <td>Leyman Carrillo</td>
-                            <td>Administrador</td>
-                          </tr>
+                        <tbody id="user-list">
+                          
                         </tbody>
                       </table>
+                      <button type="button" class="btn btn-warning my-2" style="width: 95%; color: #fff;" data-bs-toggle="modal" data-bs-target="#addUser">Agregar Usuario</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="addUserLabel">Nuevo Usuario</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody id="add-user">
+                                    <tr>
+                                      <th>Nombre</th>
+                                      <td><input type="text" name="nombre" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Cédula</th>
+                                      <td><input type="number" name="cedula" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Email</th>
+                                      <td><input type="text" name="email" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Teléfono</th>
+                                      <td><input type="text" name="telefono" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Ciudad</th>
+                                      <td><input type="text" name="ciudad" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Estado</th>
+                                      <td>
+                                        <select name="estado">
+                                          <option value="Pendiente">Pendiente</option>
+                                          <option value="Disponible">Disponible</option>
+                                          <option value="Aprobado">Aprobado</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>Rol</th>
+                                      <td>
+                                        <select name="rol">
+                                          <option value="Vendedor">Vendedor</option>
+                                          <option value="Administrador">Administrador</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="send-user" type="submit" class="btn" style="color: #fff; background-color: #59b392;" data-bs-dismiss="modal">Agregar Usuario</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="col-12 col-md-7 my-2">
-                    <div class="detalles-usuario border rounded">
-                      <h4>Omar Lamprea</h4>
-                      <table class="table">
-                        <tr>
-                          <th>Nombre</th>
-                          <td>Omar</td>
-                        </tr>
-                        <tr>
-                          <th>Cédula</th>
-                          <td>124124</td>
-                        </tr>
-                        <tr>
-                          <th>Correo</th>
-                          <td>lampreaomar@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <th>Tel</th>
-                          <td>3131321</td>
-                        </tr>
-                        <tr>
-                          <th>Ciudad</th>
-                          <td>Armenia</td>
-                        </tr>
-                        <tr>
-                          <th>Estado</th>
-                          <td>
-                            <select name="estado" id="estado">
-                              <option value="pendiente">Pendiente</option>
-                              <option value="disponible">Disponible</option>
-                              <option value="aprobado">Aprobado</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>Rol</th>
-                          <td>
-                            <select name="rol" id="rol">
-                              <option value="administrador">Administrador</option>
-                              <option value="vendedor">Vendedor</option>
-                            </select>
-                          </td>
-                        </tr>
+                    <div class="detalles-usuario border rounded d-flex flex-column justify-content-around align-items-center" style="min-height: 26rem;">
+                      <table id="user-details" class="table d-none">
+                        <h4 id="user-name" class="my-2">Detalles de Usuario</h4>
+                        <img id="img-details" src="./img/logo2.png" alt="usuarios" width="150" class="m-4">
                       </table>
-                      <button class="btn btn-warning my-2" style="width: 95%; color: #fff;"><h5 class="m-0">Guardar</h5></button>
+                      <button class="d-none btn btn-warning my-2" style="width: 95%; color: #fff;" id="btn-save-data"><h5 class="m-0">Guardar</h5></button>
                     </div>
 
                   </div>

@@ -69,9 +69,8 @@ document.addEventListener('DOMContentLoaded', e => {
   })
 
 
-
-
   //data functions....................
+  openModalAgregarProducto();
   if(window.location.pathname === '/usuarios.html') usersData(database)
   if(window.location.pathname === '/registrar_venta.html') ventasData(database)
   if(window.location.pathname === '/ventasRealizadas.html') ventasR(database)

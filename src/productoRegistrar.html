@@ -7,28 +7,35 @@
 
             <div id="content" class="col-9">
                 <div class="row content">
-                    <form class="form-inline mx-auto col-5 mt-5" action="dashboard.html">
-                        <fieldset class="border rounded p-3">
+                    <div class="card-body">
+                        <form id="form-agregar-producto" class="form">
+                          <fieldset class="border p-3">
                             <div class="form-group mt-2">
-                                <label for="IdProducto">IdProducto</label>
-                                <input type="IdProducto" class="form-control" placeholder="Ingresar IdProducto" id="IdProducto">
+                              <label for="IdProducto">ID Producto</label>
+                              <input type="number" class="form-control" id="IdProducto">
                             </div>
                             <div class="form-group mt-2">
-                                <label for="Producto">Producto</label>
-                                <input type="Producto" class="form-control" placeholder="Ingresar Producto" id="Producto">
+                              <label for="producto">Producto</label>
+                              <input type="text" class="form-control" id="producto">
                             </div>
                             <div class="form-group mt-2">
-                                <label for="Descripcion">Descripción</label>
-                                <input type="Descripcion" class="form-control" placeholder="Ingresar Descripcion" id="Descripcion">
+                              <label for="descripcion">Descripción</label>
+                              <input type="text" class="form-control" id="descripcion">
                             </div>
                             <div class="form-group mt-2">
-                                <label for="Precio">Precio</label>
-                                <input type="Precio" class="form-control" placeholder="Ingresar Precio" id="Precio">
+                              <label for="precio">Precio</label>
+                              <input type="number" class="form-control" id="precio">
                             </div>
-                            <button class="btn btn-primary mt-2">Aceptar</button>
-                            <button class="btn btn-standard mt-2 ml-5">Cancelar</button>
-                        </fieldset>
-                    </form>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
+                                <button type="button" class="btn btn-dark mt-2">Salir</button>
+                                <button type="submit" class="btn btn-success mt-2" id="btn-guardar-producto">Guardar</button>
+                            </div>
+                          </fieldset>
+
+                        
+                        </form>
+                      </div>
                 </div>
             </div>
 

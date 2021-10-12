@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', e => {
   //animaciones menu:
   dropMenu();
-
+  
   //Firestore:
   const firebaseConfig = {
     apiKey: "AIzaSyC7WRbMMBb_w-eAOCxQRr-Dj3XTlS4Hmgs",
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
   //data functions....................
+  openModalAgregarProducto();
   if(window.location.pathname === '/usuarios.html') usersData(database)
   if(window.location.pathname === '/listarproductos.html') productos(database)
 

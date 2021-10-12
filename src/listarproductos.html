@@ -17,7 +17,7 @@
                 <div class="card-body">
                   <!-- Boton Agregar Producto-->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
-                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalAgregar" id="boton-agregar">Agregar Producto</button>
+                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="" id="modalBotonAgregar">Agregar Producto</button>
                   </div>
                   <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..."
                     aria-label="Buscar..." autocomplete="off" spellcheck="true" role="combobox" aria-autocomplete="list"
@@ -30,61 +30,21 @@
                         <th scope="col">Nombre Producto</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Precio</th>
-                        <th></th>
+                        <th scope="col">Opciones</th>
                       </tr>
                     </thead>
                     <tbody id="listar-productos">
                       <tr>
-                        <th scope="row">1</th>
+                        <td>1</td>
                         <td>Hamburguesa</td>
                         <td>Hamburguesa tres carnes</td>
                         <td>10000</td>
-                        <td>
-                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
+                        <td class="">
                           <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalModificar"><span
                                      class="oi oi-pencil" title="Editar Producto"></span</a>
                           <a href="" class="btn btn-link"><span class="oi oi-trash" title="Eliminar Producto"></span></a>
                         </td>
                       </tr>
-
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Hamburguesa</td>
-                        <td>Hamburguesa tres carnes</td>
-                        <td>10000</td>
-                        <td>
-                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
-                                <a href="" class="btn btn-link"><span class="oi oi-trash"
-                                title="Eliminar Producto"></span></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Hamburguesa</td>
-                        <td>Hamburguesa tres carnes</td>
-                        <td>10000</td>
-                        <td>
-                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
-                                <a href="" class="btn btn-link"><span class="oi oi-trash"
-                                title="Eliminar Producto"></span></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Hamburguesa</td>
-                        <td>Hamburguesa tres carnes</td>
-                        <td>10000</td>
-                        <td>
-                          <a href="" class="btn btn-link"><span class="oi oi-eye" title="Ver Producto"></span></a>
-                          <a href="" class="btn btn-link"><span class="oi oi-pencil" title="Editar Producto"></span</a>
-                                <a href="" class="btn btn-link"><span class="oi oi-trash"
-                                title="Eliminar Producto"></span></a>
-                        </td>
-                      </tr>
-
-
                     </tbody>
                   </table>
                   <!-- Modal Modificar Producto-->

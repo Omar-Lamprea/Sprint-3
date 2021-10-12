@@ -1,4 +1,4 @@
-<partial src="header.html" title="where you can find the best meals...♥"></partial>
+<partial src="header.html" title="Lista de Usuarios"></partial>
 
 <div class="container-fluid">
   <div class="container">
@@ -7,78 +7,92 @@
 
       <div id="content" class="col-9">
         <div class="row justify-content-end">
+          
           <div class="col-11 content d-flex flex-column justify-content-center" style="width: 97.6%;">
             <div class="row justify-content-center">
               <div class="col-11 my-2">
-                <div class="row text-center">
-                  <div class="col-5 border">
-                    <ol class="text-start">
-                      <div>
-                        <h5>Datos del cliente</h5>
-                      </div>
-                      <div>
-                        <div class="form-group mt-2">
-                          <label for="Cedula">Cedula</label>
-                          <input type="Cedula" class="form-control" placeholder="Ingrese la Cedula" id="Cedula">
-                          <label for="NombreCompleto">Nombre Completo</label>
-                          <input type="NombreCompleto" class="form-control" placeholder="Ingrese el nombre" id="NombreCompleto">
-                        </div>
-                        <div> <label for="espace"> </label> </div>
-                        <div class="form-group mt-2">
-                          <div>
-                            <h5>Datos del Producto</h5>
+                <div class="row text-center justify-content-between">
+                  
+                  <div class="col-12 col-md-5 my-2">
+                    <div class="container-ventas border rounded" style="height: 100%;">
+                      <table class="table m-auto">
+                        <h4 class="my-2">Ventas</h4>
+                        <thead>
+                          <tr>
+                            <th>Id Venta</th>
+                            <th>Nombre Cliente</th>
+                          </tr>
+                        </thead>
+                        <tbody id="venta-list">
+                          
+                        </tbody>
+                      </table>
+                      <button type="button" class="btn btn-warning my-2" style="width: 95%; color: #fff;" data-bs-toggle="modal" data-bs-target="#addVenta">Registrar Venta</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="addVenta" tabindex="-1" aria-labelledby="addVentaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="addVentaLabel">Nueva Venta</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody id="add-venta">
+                                    <tr>
+                                      <th>Id De Venta</th>
+                                      <td><input type="text" name="idventa" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Id Del Cliente</th>
+                                      <td><input type="number" name="idcliente" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Nombre Del Cliente</th>
+                                      <td><input type="text" name="nombrecliente" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Nombre del mesero</th>
+                                      <td><input type="text" name="nombremesero" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Productos Ej:(01,05,06)</th>
+                                      <td><input type="text" name="productos" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Cantidades Ej:(4,2,1)</th>
+                                      <td><input type="text" name="cantidades" required></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Precio Total</th>
+                                      <td><input type="text" name="preciototal" required></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                                <button id="send-venta" type="submit" class="btn" style="color: #fff; background-color: #59b392;" data-bs-dismiss="modal">Registrar Venta</button>
+                              </div>
+                            </form>
                           </div>
-                          <label for="IdProducto">Id del producto</label>
-                          <input type="IdProducto" class="form-control" placeholder="Seleccione la Id del producto"
-                            id="IdProducto">
-                          <label for="Cantidad">Cantidad</label>
-                          <input type="Cantidad" class="form-control" placeholder="Ingrese la cantidad" id="Cantidad">
-                        </div>
-                        <div>
-                          <button class="btn btn-primary mt-2">Agregar</button>
-                        </div>
-                    </ol>
-                  </div>
-          
-                  <div class="col-7 border">
-                    <div class="row">
-                      <div class="col-4">
-                        <div>
-                          <table border WIDTH="420">
-                            <tr>
-                              <th>Id cliente</th>
-                              <th>Nombre</th>
-                              <th>Producto</th>
-                              <th>Cantidad</th>
-                              <th>Precio</th>
-                            </tr>
-          
-                            <tr>
-                              <td>192739273</td>
-                              <td>Javier Francisco</td>
-                              <td>Salchipapa Sencilla</td>
-                              <td>1</td>
-                              <td>7.000</td>
-                            </tr>
-                          </table>
-          
-                          <div>
-                          </div>
-          
-                        </div>
-                      </div>
-                      <div class="">
-                        <div class="col-4">
-                          <div><button class="btn btn-primary mt-2">Modificar</button></div>
-                        </div>
-                        <div class="col-4">
-                          <div><button class="btn btn-primary mt-2">Eliminar</button></div>
-                        </div>
-                        <div class="col-4">
-                          <div><button class="btn btn-primary mt-2">Registrar Venta</button></div>
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  <div class="col-12 col-md-7 my-2">
+                    <div class="detalles-venta border rounded d-flex flex-column justify-content-around align-items-center" style="min-height: 26rem;">
+                      <table id="venta-details" class="table d-none">
+                        <h4 id="venta-name" class="my-2">Detalles de ventas</h4>
+                        <img id="img-details" src="./img/logo2.png" alt="ventas" width="150" class="m-4">
+                      </table>
+                      <button class="d-none btn btn-warning my-2" style="width: 95%; color: #fff;" id="btn-modify-data"><h5 class="m-0">Modificar</h5></button>
+                      <button class="d-none btn btn-warning my-2" style="width: 95%; color: #fff;" id="btn-delete-data"><h5 class="m-0">Eliminar</h5></button>
+                    </div>
+
                   </div>
                 </div>
               </div>

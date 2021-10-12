@@ -1,90 +1,49 @@
-<partial src="header.html" title="Ventas Realizadas"></partial>
+<partial src="header.html" title="Lista de Usuarios"></partial>
 
 <div class="container-fluid">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-between">
       <partial src="menu.html"></partial>
-      <div class="col-9">
-        <div class="row justify-content-end">
-          <div class="content" style="width: 97.6%;">
-             
-            <h1 class="text-center"></h1>
-            <table border="3" class="table table-striped table-bordered table-hover"> 
-              <thead>
-                <tr>
-                  <th scope="col">ID de venta</th>
-                  <th scope="col">ID del cliente </th>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Precio Total</th>
-                  <th scope="col">Vendedor-Mesero</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table> 
-            <button class="btn btn-primary mt-2 ml-5">Modificar venta</button>
 
-            <button class="btn btn-standard mt-2 ml-5">Eliminar venta</button>
+      <div id="content" class="col-9">
+        <div class="row justify-content-end">
+          
+          <div class="col-11 content d-flex flex-column justify-content-center" style="width: 97.6%;">
+            <div class="row justify-content-center">
+              <div class="col-11 my-2">
+                <div class="row text-center justify-content-between">
+                  
+                  <div class="col-12 col-md-12 my-2">
+                    <div class="container-ventas border rounded" style="height: 100%;">
+                      <table class="table m-auto">
+                        <h4 class="my-2">Ventas</h4>
+                        <thead>
+                          <tr>
+                            <th>Id Venta</th>
+                            <th>Id Cliente</th>
+                            <th>Nombre Cliente</th>
+                            <th>Nombre Mesero</th>
+                            <th>Productos</th>
+                            <th>Cantidades</th>
+                            <th>Precio Total</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody id="ventar-list">
+                          
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

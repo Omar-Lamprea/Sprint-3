@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="login-form d-flex-inline">
-                        <form action="dashboard.html">
+                        <form>
                             <fieldset>
                                 <div class="form-group mt-2">
                                     <label for="email">Email</label>
@@ -57,7 +57,7 @@
                                     <input type="password" class="form-control" placeholder="Ingresar contraseña"
                                     id="pwd">
                                     <div class="align-self-end">
-                                        <button type="submit" class="btn btn-primary mt-4">Iniciar Sesión</button>
+                                        <button type="button" id="btn-login" class="btn btn-primary mt-4">Iniciar Sesión</button>
                                     </div>
                                 </div>
                                 <fieldset>
@@ -66,6 +66,18 @@
                 </div>
             </div>
         </div>
+        <!-- Firebase SDK (Software Development Kit) siempre se debe usar y debe
+        ser el primero de colocar -->
+        <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+        <!-- Adicionar productos de Firebase que vamos a usar -->
+        <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+        <!-- UUID -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+        <script src="./js/all.js"></script>
     </body>
 
 </html>
